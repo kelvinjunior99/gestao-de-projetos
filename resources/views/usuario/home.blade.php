@@ -55,10 +55,10 @@
                 <div class="subheader"></div>
                 <div class="ms-auto lh-1">
                   <div class="dropdown">
-                    <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Escolher</a>
+                    <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">escolher</a>
                     <div class="dropdown-menu dropdown-menu-end">
-                      <a class="dropdown-item" href="#">Meus projetos</a>
-                      <a class="dropdown-item" href="{{ route('lista-projetos')}}">Todos</a>
+                      <a class="dropdown-item" href="#">meus projetos</a>
+                      <a class="dropdown-item" href="{{ route('lista-projetos')}}">todos</a>
                     </div>
                   </div>
                 </div>
@@ -89,7 +89,7 @@
                 <div class="subheader"></div>
                 <div class="ms-auto lh-1">
                   <div class="dropdown">
-                    <a class="dropdown-toggle text-muted" href="#">Ver</a>
+                    <a class="dropdown-toggle text-muted" href="#">ver</a>
                   </div>
                 </div>
               </div>
@@ -119,10 +119,10 @@
                 <div class="subheader"></div>
                 <div class="ms-auto lh-1">
                    <div class="dropdown">
-                    <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Escolher</a>
+                    <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">escolher</a>
                     <div class="dropdown-menu dropdown-menu-end">
-                      <a class="dropdown-item" href="#">Minhas tarefas</a>
-                      <a class="dropdown-item" href="#">Todas</a>
+                      <a class="dropdown-item" href="#">minhas tarefas</a>
+                      <a class="dropdown-item" href="#">todas</a>
                     </div>
                   </div>
                 </div>
@@ -152,7 +152,7 @@
                 <div class="subheader"></div>
                 <div class="ms-auto lh-1">
                    <div class="dropdown">
-                    <a href="teste.html" class=" text-muted">Ver</a>
+                    <a href="teste.html" class=" text-muted">ver</a>
                   </div>
                 </div>
               </div>

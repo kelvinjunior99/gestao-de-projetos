@@ -21,7 +21,9 @@ class MembroController extends Controller
 
     public function lista() {
 
-        return view('usuario.lista.membros');
+        $membros = '';
+
+        return view('usuario.lista.membros', compact('membros'));
     }
 
     public function perfil() {

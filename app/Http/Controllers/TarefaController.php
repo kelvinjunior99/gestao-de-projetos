@@ -10,6 +10,7 @@ class TarefaController extends Controller
 
     public function lista() {
 
-        return view('usuario.lista.tarefas');
+        $tarefas = '';
+        return view('usuario.lista.tarefas', compact('tarefas'));
     }
 }

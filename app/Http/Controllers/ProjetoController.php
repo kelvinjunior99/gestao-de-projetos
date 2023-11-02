@@ -11,9 +11,8 @@ class ProjetoController extends Controller
     
     public function lista() {
 
-        //return Projeto::with('membro')->get();
-
-        return view('usuario.lista.projetos');
+        $projetos = '';
+        return view('usuario.lista.projetos', compact('projetos'));
     }
 
     public function create(Request $request) {

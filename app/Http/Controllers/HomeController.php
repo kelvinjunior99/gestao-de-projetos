@@ -9,6 +9,7 @@ class HomeController extends Controller
     
     public function home() {
 
-        return view('usuario.home');
+        $home = '';
+        return view('usuario.home', compact('home'));
     }
 }

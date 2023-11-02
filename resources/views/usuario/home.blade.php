@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', 'Caluga Gest - Home')
+@section('title', 'GestProject - Home')
     
 @section('conteudo')
 
@@ -89,7 +89,7 @@
                 <div class="subheader"></div>
                 <div class="ms-auto lh-1">
                   <div class="dropdown">
-                    <a class="dropdown-toggle text-muted" href="#">ver</a>
+                    <a class="dropdown-toggle text-muted" href="{{ route('lista-membros')}}">ver</a>
                   </div>
                 </div>
               </div>
@@ -122,7 +122,7 @@
                     <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">escolher</a>
                     <div class="dropdown-menu dropdown-menu-end">
                       <a class="dropdown-item" href="#">minhas tarefas</a>
-                      <a class="dropdown-item" href="#">todas</a>
+                      <a class="dropdown-item" href="{{ route('lista-tarefas')}}">todas</a>
                     </div>
                   </div>
                 </div>
@@ -185,17 +185,18 @@
 <!---Modal--->
 <div class="modal modal-blur fade" id="modal-report" tabindex="-1" role="dialog" aria-hidden="true">
 <div class="modal-dialog modal-lg" role="document">
+  <form action="">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title">New report</h5>
+      <h5 class="modal-title">Criar projeto</h5>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
       <div class="mb-3">
-        <label class="form-label">Name</label>
-        <input type="text" class="form-control" name="example-text-input" placeholder="Your report name">
+        <label class="form-label">Nome</label>
+        <input type="text" class="form-control" name="example-text-input" placeholder="projeto">
       </div>
-      <label class="form-label">Report type</label>
+      <label class="form-label">Nivel</label>
       <div class="form-selectgroup-boxes row mb-3">
         <div class="col-lg-6">
           <label class="form-selectgroup-item">
@@ -205,8 +206,8 @@
                 <span class="form-selectgroup-check"></span>
               </span>
               <span class="form-selectgroup-label-content">
-                <span class="form-selectgroup-title strong mb-1">Simple</span>
-                <span class="d-block text-muted">Provide only basic data needed for the report</span>
+                <span class="form-selectgroup-title strong mb-1">Simples</span>
+                <span class="d-block text-muted">...</span>
               </span>
             </span>
           </label>
@@ -219,8 +220,8 @@
                 <span class="form-selectgroup-check"></span>
               </span>
               <span class="form-selectgroup-label-content">
-                <span class="form-selectgroup-title strong mb-1">Advanced</span>
-                <span class="d-block text-muted">Insert charts and additional advanced analyses to be inserted in the report</span>
+                <span class="form-selectgroup-title strong mb-1">Avançado</span>
+                <span class="d-block text-muted">...</span>
               </span>
             </span>
           </label>
@@ -229,22 +230,21 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="mb-3">
-            <label class="form-label">Report url</label>
+            <label class="form-label">GitHub url</label>
             <div class="input-group input-group-flat">
               <span class="input-group-text">
                 https://tabler.io/reports/
               </span>
-              <input type="text" class="form-control ps-0"  value="report-01" autocomplete="off">
+              <input type="text" class="form-control ps-0"  value="report-01">
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="mb-3">
-            <label class="form-label">Visibility</label>
+            <label class="form-label">Visibilidade</label>
             <select class="form-select">
-              <option value="1" selected>Private</option>
-              <option value="2">Public</option>
-              <option value="3">Hidden</option>
+              <option value="publico" selected>Publico</option>
+              <option value="privado">Privado</option>
             </select>
           </div>
         </div>
@@ -254,35 +254,34 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="mb-3">
-            <label class="form-label">Client name</label>
-            <input type="text" class="form-control">
+            <label class="form-label">Data</label>
+            <input type="date" class="form-control">
           </div>
         </div>
         <div class="col-lg-6">
           <div class="mb-3">
-            <label class="form-label">Reporting period</label>
+            <label class="form-label">Data final</label>
             <input type="date" class="form-control">
           </div>
         </div>
         <div class="col-lg-12">
           <div>
-            <label class="form-label">Additional information</label>
+            <label class="form-label">Descrição</label>
             <textarea class="form-control" rows="3"></textarea>
           </div>
         </div>
       </div>
     </div>
     <div class="modal-footer">
-      <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
-        Cancel
-      </a>
-      <a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
-        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+      <button type="submit" class="btn btn-primary ms-auto">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-        Create new report
-      </a>
+        Guardar
+      </button>
+     
     </div>
   </div>
+</form>
+
 </div>
 </div>
 

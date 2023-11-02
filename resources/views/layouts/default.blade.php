@@ -157,9 +157,11 @@
                 </div>
               </a>
               <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                <a href="#" class="dropdown-item">Status</a>
-                <a href="./profile.html" class="dropdown-item">Perfil</a>
-                <a href="#" class="dropdown-item">Feedback</a>
+                <a href="#" class="dropdown-item">Meus projetos</a>
+                <a href="#" class="dropdown-item">Minhas tarefas</a>
+                <a href="{{ route('perfil')}}" class="dropdown-item">Perfil</a>
+                
+                
                 <div class="dropdown-divider"></div>
                 <a href="./sign-in.html" class="dropdown-item">Sair</a>
               </div>
@@ -170,14 +172,28 @@
             <ul class="navbar-nav pt-lg-3">
               
               <li class="nav-item">
-                <a class="nav-link" href="./" >
+
+                @isset($home)
+                    <a class="nav-link bg-primary fw-bold" href="/" >
                   <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
                   </span>
                   <span class="nav-link-title">
                     Home
                   </span>
-                </a>
+                </a> 
+                @else 
+
+                <a class="nav-link" href="/" >
+                  <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                  </span>
+                  <span class="nav-link-title">
+                    Home
+                  </span>
+                </a> 
+                @endisset
+               
               </li>
 
                <li class="nav-item dropdown">
@@ -219,10 +235,10 @@
                 <div class="dropdown-menu">
                   <div class="dropdown-menu-columns">
                     <div class="dropdown-menu-column">
-                      <a class="dropdown-item" href="./accordion.html">
+                      <a class="dropdown-item" href="">
                         Minhas tarefas
                       </a>
-                      <a class="dropdown-item" href="./accordion.html">
+                      <a class="dropdown-item" href="{{ route('lista-tarefas')}}">
                         Todas
                       </a>
                     </div>
@@ -231,7 +247,7 @@
               </li>
           
               <li class="nav-item">
-                <a class="nav-link" href="./icons.html" >
+                <a class="nav-link" href="{{ route('lista-membros')}}">
                   <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/ghost -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 11a7 7 0 0 1 14 0v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-7" /><path d="M10 10l.01 0" /><path d="M14 10l.01 0" /><path d="M10 14a3.5 3.5 0 0 0 4 0" /></svg>
                   </span>
@@ -375,8 +391,8 @@
               </a>
               <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                 <a href="#" class="dropdown-item">Meus projetos</a>
-                <a href="./profile.html" class="dropdown-item">Perfil</a>
-                <a href="#" class="dropdown-item">Feedback</a>
+                <a href="./profile.html" class="dropdown-item">Minhas tarefas</a>
+                <a href="{{ route('perfil')}}" class="dropdown-item">Perfil</a>
                 <div class="dropdown-divider"></div>
                 <a href="./settings.html" class="dropdown-item d-none">Settings</a>
                 <a href="./sign-in.html" class="dropdown-item">Sair</a>

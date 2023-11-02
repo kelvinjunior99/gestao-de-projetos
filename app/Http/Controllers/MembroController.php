@@ -24,6 +24,11 @@ class MembroController extends Controller
         return view('usuario.lista.membros');
     }
 
+    public function perfil() {
+        
+        return view('usuario.perfil');
+    }
+
    
 
    

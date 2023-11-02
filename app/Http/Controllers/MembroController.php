@@ -29,6 +29,11 @@ class MembroController extends Controller
         return view('usuario.perfil');
     }
 
+    public function cadastrar() {
+
+        return view('cadastrar');
+    }
+
    
 
    

@@ -4,9 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('assets/css/tailwind.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('dist/css/tailwind.min.css')}}">
+    <link href="{{ asset('dist/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet"/>
     <title>Login</title>
+
+    <style>
+      input:active, input:focus{
+        font-weight: bolder;
+        color: #a5a5a5;
+      }
+    </style>
 </head>
 <body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
 
@@ -34,7 +41,7 @@
       <div class="text-center">
         <p class="text-sm">Não tens uma conta ? <a href="#" class="text-cyan-600 text-blue-900">Criar conta</a></p>
       </div>
-      <p class="text-xs text-gray-600 text-center mt-10">&copy; 2023 CG</p>
+      <p class="text-xs text-gray-600 text-center mt-10">&copy; 2023 GP</p>
     </div>
   </div>
 </div>

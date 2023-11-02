@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::get('/cadastrar', [MembroController::class, 'cadastrar'])->name('cadastrar');
 Route::get('/membro/perfil', [MembroController::class, 'perfil'])->name('perfil');
 
 Route::prefix('lista')->group( function() {

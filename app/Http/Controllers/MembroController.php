@@ -19,6 +19,11 @@ class MembroController extends Controller
 
     }
 
+    public function lista() {
+
+        return view('usuario.lista.membros');
+    }
+
    
 
    

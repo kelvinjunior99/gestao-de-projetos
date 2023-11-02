@@ -34,7 +34,7 @@
           </button>
           <h1 class="navbar-brand navbar-brand-autodark">
             <a href="/">
-              <img src="{{ asset('static/logo.svg')}}" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+              Gestor de projetos
             </a>
           </h1>
           <div class="navbar-nav flex-row d-lg-none">
@@ -180,8 +180,8 @@
                 </a>
               </li>
 
-               <li class="nav-item">
-                <a class="nav-link" href="{{ route('lista-projetos')}}" >
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false"  >
                   <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" /><path d="M12 12l8 -4.5" /><path d="M12 12l0 9" /><path d="M12 12l-8 -4.5" /><path d="M16 5.25l-8 4.5" /></svg>
                   </span>
@@ -189,42 +189,25 @@
                     Projetos
                   </span>
                 </a>
-              </li>
 
-              
-
-              <li class="nav-item dropdown d-none">
-                <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false" >
-                  <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" /><path d="M12 12l8 -4.5" /><path d="M12 12l0 9" /><path d="M12 12l-8 -4.5" /><path d="M16 5.25l-8 4.5" /></svg>
-                  </span>
-                  <span class="nav-link-title">
-                    Interface
-                  </span>
-                </a>
                 <div class="dropdown-menu">
                   <div class="dropdown-menu-columns">
                     <div class="dropdown-menu-column">
-                      <a class="dropdown-item" href="./accordion.html">
-                        Accordion
+                      <a class="dropdown-item" >
+                        Meus projetos
                       </a>
-                      <a class="dropdown-item" href="./blank.html">
-                        Blank page
+                      <a class="dropdown-item" href="{{ route('lista-projetos')}}">
+                        Todos
                       </a>
-                      <a class="dropdown-item" href="./badges.html">
-                        Badges
-                        <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
-                      </a>
-                      <a class="dropdown-item" href="./buttons.html">
-                        Buttons
-                      </a>
-
                     </div>
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./form-elements.html" >
+
+
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false"  >
                   <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11l3 3l8 -8" /><path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
                   </span>
@@ -232,6 +215,19 @@
                     Tarefas
                   </span>
                 </a>
+
+                <div class="dropdown-menu">
+                  <div class="dropdown-menu-columns">
+                    <div class="dropdown-menu-column">
+                      <a class="dropdown-item" href="./accordion.html">
+                        Minhas tarefas
+                      </a>
+                      <a class="dropdown-item" href="./accordion.html">
+                        Todas
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </li>
           
               <li class="nav-item">

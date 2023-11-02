@@ -30,12 +30,12 @@
         </div>
       </div>
 
-      <div class="container-xl">
+      <div class="container-xl mt-4 mb-4">
         <div class="row row-cards">
           <div class="col-sm-6 col-lg-3">
-            <div class="card card-md">
+            <div class="card card-md border border-2 rounded-2 border-secondary">
               <div class="card-body">
-                <div class="text-uppercase text-muted font-weight-medium">Free</div>
+                <div class="text-uppercase text-muted font-weight-medium d-none"></div>
 
                 <div class="display-5 fw-bold my-3"></div>
                 <h3>Sistema de Gestão Escolar</h3>
@@ -43,12 +43,12 @@
                  
                   <li>
                     
-                    <li><i class="fa fa-calendar" aria-hidden="true"></i> 20/10/2023</li>
+                    <li class="text-primary fw-bold"><i class="fa fa-calendar" aria-hidden="true"></i> 20/10/2023</li>
 
-                    <li><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 30/10/2023</li>
+                    <li class="text-primary fw-bold"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 30/10/2023</li>
                     <!-- Download SVG icon from http://tabler-icons.io/i/check -->
 
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> 3 Tarefas</li>
+                    <li class="fw-bold"><i class="fa fa-check-circle" aria-hidden="true"></i> 3 Tarefas</li>
                     
                   </li>
                   <li>
@@ -65,7 +65,7 @@
                 
                 </ul>
                 <div class="text-center mt-4">
-                  <a href="#" class="btn w-100 btn-green">ver</a>
+                  <a href="#" class="btn w-100 bg-secondary text-white">ver</a>
                 </div>
               </div>
             </div>

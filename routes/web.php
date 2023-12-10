@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\CadastrarController;
+use App\Http\Controllers\LoginController;
 use App\Http\Livewire\Home;
 use App\Http\Livewire\Membros;
+use App\Http\Livewire\Perfil;
 use App\Http\Livewire\Projetos;
 use App\Http\Livewire\Tarefas;
 use App\Http\Livewire\Teste;
@@ -19,6 +22,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', Home::class)->name('home');
+Route::get('/usuario/perfil', Perfil::class)->name('perfil');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/cadastrar', [CadastrarController::class, 'create'])->name('cadastrar');
 
 
 

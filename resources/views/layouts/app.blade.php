@@ -160,7 +160,7 @@
               <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                 <a href="#" class="dropdown-item">Meus projetos</a>
                 <a href="#" class="dropdown-item">Minhas tarefas</a>
-                <a href="" class="dropdown-item">Perfil</a>
+                <a href="{{ route('perfil')}}" class="dropdown-item">Perfil</a>
                 
                 
                 <div class="dropdown-divider"></div>
@@ -474,7 +474,7 @@
               <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                 <a href="#" class="dropdown-item">Meus projetos</a>
                 <a href="./profile.html" class="dropdown-item">Minhas tarefas</a>
-                <a href="" class="dropdown-item">Perfil</a>
+                <a href="{{ route('perfil')}}" class="dropdown-item">Perfil</a>
                 <div class="dropdown-divider"></div>
                 <a href="./settings.html" class="dropdown-item d-none">Settings</a>
                 <a href="./sign-in.html" class="dropdown-item">Sair</a>

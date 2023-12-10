@@ -19,10 +19,12 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'cargo',
         'email',
         'password',
     ];
 
+    
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -41,4 +43,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function projeto() {
+
+        return $this->hasMany(Projeto::class, 'id_user');
+    }
 }

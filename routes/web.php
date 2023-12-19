@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Livewire\Home;
 use App\Http\Livewire\Membros;
 use App\Http\Livewire\Perfil;
+use App\Http\Livewire\Projeto;
 use App\Http\Livewire\Projetos;
 use App\Http\Livewire\Tarefas;
 use App\Http\Livewire\Teste;
@@ -30,6 +31,9 @@ Route::get('/cadastrar', [CadastrarController::class, 'create'])->name('cadastra
 
 Route::get('/teste', Teste::class);
 
+Route::prefix('cadastrar')->group( function() {
+    Route::get('/projeto', Projeto::class)->name('cad-projeto');
+});
 Route::prefix('lista')->group( function() { 
     Route::get('/membros', Membros::class)->name('lista-membros');
     Route::get('/projetos', Projetos::class)->name('lista-projetos');

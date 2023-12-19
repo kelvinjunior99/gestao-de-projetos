@@ -225,14 +225,15 @@
     
       </div>
     </div>
-    
-    
-    
+   
     <!---Modal--->
     <div class="modal modal-blur fade" id="modal-report" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
-        <form action="">
-        <div class="modal-content">
+        <form method="post" wire:submit.prevent="create">
+          @csrf
+         
+        <div class="modal-content"> 
+        
           <div class="modal-header">
             <h5 class="modal-title">Criar projeto</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -240,7 +241,7 @@
           <div class="modal-body">
             <div class="mb-3">
               <label class="form-label">Nome</label>
-              <input type="text" class="form-control" name="example-text-input" placeholder="projeto">
+              <input type="text" name="nome" id="nome" class="form-control" placeholder="projeto" wire:model="nome">
             </div>
             <label class="form-label">Nivel</label>
             <div class="form-selectgroup-boxes row mb-3">
@@ -313,7 +314,7 @@
               <div class="col-lg-12">
                 <div>
                   <label class="form-label">Descrição</label>
-                  <textarea class="form-control" rows="3"></textarea>
+                  <textarea name="descricao" wire:model="descricao" class="form-control" rows="3"></textarea>
                 </div>
               </div>
             </div>

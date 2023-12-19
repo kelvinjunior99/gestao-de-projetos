@@ -4,13 +4,10 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class Teste extends Component
+class Projeto extends Component
 {
-
-    public $teste = "texto";
-    
     public function render()
     {
-        return view('livewire.teste');
+        return view('livewire..usuario.cadastrar.projeto');
     }
 }

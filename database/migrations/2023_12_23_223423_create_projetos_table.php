@@ -15,14 +15,11 @@ return new class extends Migration
     {
         Schema::create('projetos', function (Blueprint $table) {
             $table->id();
+
             $table->string('nome');
             $table->string('slug')->nullable();
             $table->text('descricao')->nullable();
             $table->string('estado')->default('activo');
-
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            
             $table->timestamps();
         });
     }

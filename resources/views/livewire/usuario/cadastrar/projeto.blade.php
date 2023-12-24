@@ -1,16 +1,19 @@
 <div class="page-wrapper">
     <div class="page-body">
-<div class="">
+<div class="container">
     <div class="modal-dialog modal-lg" role="document">
+
+      @if (session('sucesso'))
+      <div class="alert alert-dark fw-bold" role="alert">
+        Cadastrado com sucesso!
+      </div>
+      @endif
+
       <form method="post" wire:submit.prevent="create">
         @csrf
        
-      <div class="modal-content"> 
+      <div class="modal-content mt-4"> 
       
-        <div class="modal-header">
-          <h5 class="modal-title">Criar projeto</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
         <div class="modal-body">
           <div class="mb-3">
             <label class="form-label">Nome</label>

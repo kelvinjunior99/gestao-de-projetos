@@ -1,11 +1,17 @@
 <div class="page-wrapper">
-    <div class="page-body">
+<div class="page-body">
 <div class="container">
     <div class="modal-dialog modal-lg" role="document">
 
       @if (session('sucesso'))
       <div class="alert alert-dark fw-bold" role="alert">
         Cadastrado com sucesso!
+      </div>
+      @endif
+
+      @if (session('erroNome'))
+      <div class="alert alert-danger fw-bold" role="alert">
+         {{session('erroNome')}}
       </div>
       @endif
 
@@ -23,7 +29,7 @@
           <div class="form-selectgroup-boxes row mb-3">
             <div class="col-lg-6">
               <label class="form-selectgroup-item">
-                <input type="radio" name="report-type" value="1" class="form-selectgroup-input" checked>
+                <input type="radio" name="tipo" value="simples" class="form-selectgroup-input" wire:model="tipo" checked>
                 <span class="form-selectgroup-label d-flex align-items-center p-3">
                   <span class="me-3">
                     <span class="form-selectgroup-check"></span>
@@ -37,7 +43,7 @@
             </div>
             <div class="col-lg-6">
               <label class="form-selectgroup-item">
-                <input type="radio" name="report-type" value="1" class="form-selectgroup-input">
+                <input type="radio" name="tipo" value="avançado" class="form-selectgroup-input" wire:model="tipo">
                 <span class="form-selectgroup-label d-flex align-items-center p-3">
                   <span class="me-3">
                     <span class="form-selectgroup-check"></span>
@@ -56,16 +62,16 @@
                 <label class="form-label">GitHub url</label>
                 <div class="input-group input-group-flat">
                   <span class="input-group-text">
-                    https://tabler.io/reports/
+                    
                   </span>
-                  <input type="text" class="form-control ps-0"  value="report-01">
+                  <input type="url" name="github" id="" class="form-control ps-0" placeholder="https://www.github.com/exemple" wire:model="github">
                 </div>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="mb-3">
                 <label class="form-label">Visibilidade</label>
-                <select class="form-select">
+                <select class="form-select" name="visibilidade" wire:model="visibilidade">
                   <option value="publico" selected>Publico</option>
                   <option value="privado">Privado</option>
                 </select>
@@ -78,13 +84,13 @@
             <div class="col-lg-6">
               <div class="mb-3">
                 <label class="form-label">Data</label>
-                <input type="date" class="form-control">
+                <input type="date" value="{{ date('d/M/Y')}}" class="form-control" disabled>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="mb-3">
                 <label class="form-label">Data final</label>
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" name="data_final" wire:model="data_final">
               </div>
             </div>
             <div class="col-lg-12">

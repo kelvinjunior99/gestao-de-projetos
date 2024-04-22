@@ -10,7 +10,7 @@ class Projetos extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nome', 'slug', 'data', 'descricao', 'estado',
+        'nome', 'slug', 'data', 'descricao', 'estado', 'tipo', 'github', 'visibilidade', 'data_final',
     ];
 
    // public function membro() {

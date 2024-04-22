@@ -48,21 +48,25 @@
     
           <div class="container-xl mt-4 mb-4">
             <div class="row row-cards">
+
+                @foreach ($projetos as $projeto)
+               
+            
               <div class="col-sm-6 col-lg-3">
-                <div class="card card-md border border-2 rounded-2 border-secondary">
+                <div class="card card-md rounded-3">
                   <div class="card-body">
                     <div class="text-uppercase text-muted font-weight-medium d-none"></div>
     
                     <div class="display-5 fw-bold my-3"></div>
-                    <h3>Sistema de Gestão Escolar</h3>
+                    <h3> {{$projeto->nome}}</h3>
                     <ul class="list-unstyled lh-lg">
                      
                       <li>
                         
-                        <li class="text-primary fw-bold"><i class="fa fa-calendar" aria-hidden="true"></i> 20/10/2023</li>
+                        <li class="fw-bold"><i class="fa fa-calendar" aria-hidden="true"></i> {{ date('d/m/Y', strtotime($projeto->created_at)) }}</li>
     
-                        <li class="text-primary fw-bold"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 30/10/2023</li>
-                        <!-- Download SVG icon from http://tabler-icons.io/i/check -->
+                        <!--<li class="text-primary fw-bold"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 30/10/2023</li>
+                         Download SVG icon from http://tabler-icons.io/i/check -->
     
                         <li class="fw-bold"><i class="fa fa-check-circle" aria-hidden="true"></i> 3 Tarefas</li>
                         
@@ -70,8 +74,8 @@
                       <li>
                         <!-- Download SVG icon from http://tabler-icons.io/i/x -->
                         
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon me-1 text-success" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
-                        Activo
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon me-1 text-success fw-bold" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
+                        {{$projeto->estado}}
                       </li>
                       <li class="d-none">
                         <!-- Download SVG icon from http://tabler-icons.io/i/x -->
@@ -81,11 +85,15 @@
                     
                     </ul>
                     <div class="text-center mt-4">
-                      <a href="#" class="btn w-100 bg-secondary text-white">ver</a>
+                      <a href="#" class="btn w-100 btn-green">ver</a>
                     </div>
                   </div>
                 </div>
               </div>
+
+             @endforeach
+
+
               <div class="col-sm-6 col-lg-3">
                 <div class="card card-md">
                   <div class="ribbon ribbon-top ribbon-bookmark bg-green">
@@ -193,10 +201,13 @@
               </div>
               
             </div>
+           
           </div>
     
             
-      
+       <div class="text-black">
+        {{$projetos->links()}}
+       </div>
           <div class="card-footer d-flex align-items-center">
             <p class="m-0 text-muted">Showing <span>1</span> to <span>8</span> of <span>16</span> entries</p>
             <ul class="pagination m-0 ms-auto">

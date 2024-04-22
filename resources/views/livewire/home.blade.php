@@ -52,6 +52,7 @@
                         <div class="dropdown">
                           <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">escolher</a>
                           <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="{{ route('cad-projeto')}}">cadastrar</a>
                             <a class="dropdown-item" href="#">meus projetos</a>
                             <a class="dropdown-item" href="{{ route('lista-projetos')}}">todos</a>
                           </div>

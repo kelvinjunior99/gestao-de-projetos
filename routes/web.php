@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CadastrarController;
 use App\Http\Controllers\LoginController;
+use App\Http\Livewire\AllProject;
 use App\Http\Livewire\Home;
 use App\Http\Livewire\Membros;
 use App\Http\Livewire\Perfil;
@@ -36,6 +37,6 @@ Route::prefix('cadastrar')->group( function() {
 });
 Route::prefix('lista')->group( function() { 
     Route::get('/membros', Membros::class)->name('lista-membros');
-    Route::get('/projetos', Projetos::class)->name('lista-projetos');
+    Route::get('/projetos', AllProject::class)->name('lista-projetos');
     Route::get('/tarefas', Tarefas::class)->name('lista-tarefas');
  }); 

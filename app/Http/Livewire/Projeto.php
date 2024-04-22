@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-
 use Livewire\Component;
 
 class Projeto extends Component
@@ -15,6 +14,12 @@ class Projeto extends Component
     public $nome;
     public $slug;
     public $descricao;
+    public $visibilidade;
+    public $tipo;
+    public $github;
+    public $data_final;
+
+    public $teste = "teste";
 
     protected $rules = [
         'nome' => 'required|min:20'
@@ -22,7 +27,7 @@ class Projeto extends Component
 
     public function render()
     {
-        return view('livewire..usuario.cadastrar.projeto');
+        return view('livewire.usuario.cadastrar.projeto');
     }
 
     public function create() 
@@ -32,19 +37,28 @@ class Projeto extends Component
 
         $sql = DB::table('projetos')->where('nome', $nome)->first();
         if($sql) {
-            dd('nome é igual');
+            
+            return back()->with('erroNome', 'Mude o nome, já existe um projeto com este nome!');
         }
         else {
-            dd('nome não é igual');
+            
+            Projetos::create([
+                'nome' => $this->nome,
+                'descricao' => $this->descricao,
+                'slug' => $this->slug,
+                //'id_user' => 1,
+                'estado' => "activo",
+                 'visibilidade' => $this->visibilidade,
+                 'github' => $this->github,
+                 'data_final' => $this->data_final,
+                 'tipo' => $this->tipo,
+            ]);
+            return back()->with('sucesso', 'Cadastrado com sucesso!');
         }
 
-        Projetos::create([
-            'nome' => $this->nome,
-            'descricao' => $this->descricao,
-            'slug' => $this->slug,
-            //'id_user' => 1,
-            'estado' => "activo",
-        ]);
-        return back()->with('sucesso', 'Cadastrado com sucesso!');
+        
     }
+
+
+    
 }
